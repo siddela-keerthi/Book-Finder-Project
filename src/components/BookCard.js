@@ -1,14 +1,28 @@
+// BookCard.js [COMPONENT]
+
 import React from "react";
 
-const BookCard = ({ book }) => {
+function BookCard({ book }) {
   return (
     <div className="book-card">
+      {book.coverId ? (
+        <img
+          src={`https://covers.openlibrary.org/b/id/${book.coverId}-M.jpg`}
+          alt={`${book.title} cover`}
+          className="book-cover"
+        />
+      ) : (
+        <div className="no-cover">No Cover</div>
+      )}
       <h3>{book.title}</h3>
-      <p>Author: {book.author_name?.[0]}</p>
-      <p>First Published: {book.first_publish_year}</p>
-      <p>Publisher: {book.publisher?.[0]}</p>
+      <p>
+        <strong>Author:</strong> {book.author}
+      </p>
+      <p>
+        <strong>Published:</strong> {book.publishYear}
+      </p>
     </div>
   );
-};
+}
 
 export default BookCard;

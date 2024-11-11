@@ -1,0 +1,43 @@
+/* Infolines.css */
+/* Styling for the InfoLines component */
+.info-lines {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Lines with content */
+  .info-line {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #555;
+    font-weight: bold;
+    text-align: left;
+    transform: translateX(-100%);
+    animation: slideIn 1s forwards;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Animation for each line sliding in from the left */
+  @keyframes slideIn {
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Hover effect on lines */
+  .info-line:hover {
+    color: #007bff;
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  span {
+    color :navy;
+  }
+  #keywords {
+    color:red;
+  }

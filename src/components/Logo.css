@@ -1,0 +1,8 @@
+/* For styling the logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
